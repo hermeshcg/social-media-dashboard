@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Body = styled.div`
   h1 {
     text-align: center;
-    color: #fff;
+    color: ${(props) => (props.theme.mode === 'dark' ? '#fff' : '#1e2042')};
   }
 
   .social-dashboard {
@@ -16,7 +16,8 @@ export const Body = styled.div`
     gap: 0px 0px;
 
     .facebook-main {
-      background-color: hsl(228, 28%, 20%);
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#252a41' : '#e0e0e0'};
       padding: 20px;
       margin-right: 20px;
       height: 190px;
@@ -48,10 +49,12 @@ export const Body = styled.div`
         align-items: center;
 
         strong {
-          color: #fff;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
         }
         span {
-          color: #cdcdcd;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
           font-size: 12px;
         }
       }
@@ -72,7 +75,8 @@ export const Body = styled.div`
     }
 
     .twitter-main {
-      background-color: hsl(228, 28%, 20%);
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#252a41' : '#e0e0e0'};
       padding: 20px;
       margin-right: 20px;
       height: 190px;
@@ -105,9 +109,12 @@ export const Body = styled.div`
         align-items: center;
 
         strong {
-          color: #fff;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
         }
         span {
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
           color: #cdcdcd;
           font-size: 12px;
         }
@@ -128,7 +135,8 @@ export const Body = styled.div`
     }
 
     .instagram-main {
-      background-color: hsl(228, 28%, 20%);
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#252a41' : '#e0e0e0'};
       padding: 20px;
       margin-right: 20px;
       height: 190px;
@@ -160,10 +168,12 @@ export const Body = styled.div`
         align-items: center;
 
         strong {
-          color: #fff;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
         }
         span {
-          color: #cdcdcd;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
           font-size: 12px;
         }
       }
@@ -184,7 +194,8 @@ export const Body = styled.div`
     }
 
     .youtube-main {
-      background-color: hsl(228, 28%, 20%);
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#252a41' : '#e0e0e0'};
       padding: 20px;
       margin-right: 20px;
       height: 190px;
@@ -217,10 +228,12 @@ export const Body = styled.div`
         align-items: center;
 
         strong {
-          color: #fff;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
         }
         span {
-          color: #cdcdcd;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
           font-size: 12px;
         }
       }
@@ -251,7 +264,8 @@ export const Body = styled.div`
     gap: 0px 0px;
 
     .overview-card {
-      background-color: hsl(228, 28%, 20%);
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#252a41' : '#e0e0e0'};
       padding: 20px;
       margin-right: 20px;
       margin-bottom: 20px;
@@ -285,7 +299,8 @@ export const Body = styled.div`
         justify-content: space-between;
 
         strong {
-          color: #fff;
+          color: ${(props) =>
+            props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
         }
 
         .porcentage {

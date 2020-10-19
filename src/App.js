@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
+import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/global';
 
@@ -13,10 +14,16 @@ import up from './images/icon-up.svg';
 import { Body } from './styles/styles';
 
 function App() {
+  const [theme, setTheme] = useState({ mode: 'dark' });
+
+  const toggleTheme = () => {
+    setTheme(theme.mode === 'dark' ? { mode: 'light' } : { mode: 'dark' });
+  };
+
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <header>
-        <Header />
+        <Header toggleTheme={toggleTheme} />
       </header>
       <Body>
         <div className="social-dashboard">
@@ -206,7 +213,7 @@ function App() {
         </div>
       </Body>
       <GlobalStyle />
-    </div>
+    </ThemeProvider>
   );
 }
 

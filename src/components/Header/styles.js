@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  color: #fff;
-  background: hsl(232, 19%, 18%);
+  color: ${(props) => (props.theme.mode === 'dark' ? '#f7f7f7' : '#1e202a')};
   padding: 30px;
+  background: ${(props) =>
+    props.theme.mode === 'dark' ? '#1e202a' : '#e0e0e0'};
 
   display: flex;
   justify-content: space-between;
@@ -15,12 +16,29 @@ export const Container = styled.div`
 
     p {
       font-size: 16px;
-      color: #cdcdcd;
+      color: ${(props) =>
+        props.theme.mode === 'dark' ? '#f7f7f7' : '#1e202a'};
     }
   }
 
   .left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 25px;
     margin-right: 50px;
+    button {
+      border: 1px solid #1e1e1e;
+      padding: 25px;
+      border-radius: 8px;
+      margin-right: 7px;
+      background: ${(props) =>
+        props.theme.mode === 'dark' ? '#e0e0e0' : '#cccccc'};
+
+      p {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
   }
 `;

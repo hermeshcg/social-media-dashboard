@@ -1,8 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import Switch from 'react-switch';
+
+import { ThemeContext } from 'styled-components';
 
 import { Container } from './styles';
 
-function Header() {
+function Header({ toggleTheme }) {
+  const { title } = useContext(ThemeContext);
+
   return (
     <Container>
       <div className="right-side">
@@ -11,7 +17,9 @@ function Header() {
       </div>
 
       <div className="left-side">
-        <p>Dark Mode</p>
+        <button type="button" onClick={toggleTheme}>
+          <p>Dark mode</p>
+        </button>
       </div>
     </Container>
   );

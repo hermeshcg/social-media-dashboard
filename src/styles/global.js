@@ -9,7 +9,8 @@ export default createGlobalStyle`
   }
 
   body{
-    background: hsl(230, 17%, 14%);
+    background: ${(props) =>
+      props.theme.mode === 'dark' ? '#1e202a' : '#f7f7f7'};
   }
 
   h1{
