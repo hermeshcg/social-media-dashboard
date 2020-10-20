@@ -115,7 +115,6 @@ export const Body = styled.div`
         span {
           color: ${(props) =>
             props.theme.mode === 'dark' ? '#e0e0e0' : '#252a41'};
-          color: #cdcdcd;
           font-size: 12px;
         }
       }

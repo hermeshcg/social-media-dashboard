@@ -1,14 +1,9 @@
 import React from 'react';
-import { useContext } from 'react';
-import Switch from 'react-switch';
-
-import { ThemeContext } from 'styled-components';
+import { WiSolarEclipse } from 'react-icons/wi';
 
 import { Container } from './styles';
 
 function Header({ toggleTheme }) {
-  const { title } = useContext(ThemeContext);
-
   return (
     <Container>
       <div className="right-side">
@@ -18,7 +13,7 @@ function Header({ toggleTheme }) {
 
       <div className="left-side">
         <button type="button" onClick={toggleTheme}>
-          <p>Dark mode</p>
+          <WiSolarEclipse size={30} />
         </button>
       </div>
     </Container>

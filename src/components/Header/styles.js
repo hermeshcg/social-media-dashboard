@@ -4,7 +4,7 @@ export const Container = styled.div`
   color: ${(props) => (props.theme.mode === 'dark' ? '#f7f7f7' : '#1e202a')};
   padding: 30px;
   background: ${(props) =>
-    props.theme.mode === 'dark' ? '#1e202a' : '#e0e0e0'};
+    props.theme.mode === 'dark' ? '#1e202f' : '#e0e0e0'};
 
   display: flex;
   justify-content: space-between;
@@ -28,12 +28,13 @@ export const Container = styled.div`
     margin-top: 25px;
     margin-right: 50px;
     button {
-      border: 1px solid #1e1e1e;
-      padding: 25px;
+      border: 1px solid
+        ${(props) => (props.theme.mode === 'dark' ? '#ccc' : '#121212')};
+      padding: 10px;
       border-radius: 8px;
       margin-right: 7px;
       background: ${(props) =>
-        props.theme.mode === 'dark' ? '#e0e0e0' : '#cccccc'};
+        props.theme.mode === 'dark' ? '#e0e0e0' : '#ccc'};
 
       p {
         font-size: 14px;
