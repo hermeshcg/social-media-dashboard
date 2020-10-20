@@ -324,4 +324,77 @@ export const Body = styled.div`
       }
     }
   }
+
+  @media (max-width: 767px) {
+    .social-dashboard {
+      display: grid;
+      margin: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      grid-template-columns: repeat(1, 1fr);
+
+      .facebook-main {
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+
+        .updown {
+          flex-direction: row;
+        }
+      }
+      .twitter-main {
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        .updown {
+          flex-direction: row;
+        }
+      }
+      .instagram-main {
+        width: 90%;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        .updown {
+          flex-direction: row;
+        }
+      }
+      .youtube-main {
+        width: 90%;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        .updown {
+          flex-direction: row;
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+      font-size: 40px;
+    }
+    .overview {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+      gap: 0px 0px;
+      margin: 0;
+      .overview-card {
+        width: 90%;
+        margin-left: 20px;
+        flex-direction: column;
+        .upper {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .lower {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
 `;
