@@ -314,7 +314,7 @@ export const Body = styled.div`
             margin-left: 5px;
             color: hsl(163, 72%, 41%);
           }
-          /* this is a test */
+
           .text-red {
             font-size: 14px;
             margin-left: 5px;
